@@ -1,0 +1,18 @@
+{{- if .Values.route.enabled }}
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: {{ template "application.fullname" . }}
+  namespace: {{ .Values.deploymentNamespace }}
+spec:
+  {{- if .Values.route.hostname }}
+  host: {{ .Values.route.hostname }}
+  {{- end}}
+  path: {{ default "/" .path }}
+  port:
+    targetPort: http
+  to:
+    kind: Service
+    name: {{ template "application.fullname" . }}
+{{- end }}
+
