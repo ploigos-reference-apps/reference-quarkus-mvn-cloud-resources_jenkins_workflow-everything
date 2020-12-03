@@ -12,5 +12,5 @@ version: 0.1.0
 
 dependencies:
 - name: ploigos-workflow-shared-resources
-  version: ">=0.14.0-0 <0.15.0-0"
-  repository: "https://itewk.github.io/ploigos-charts"
+  version: "0.14.0"
+  repository: "https://ploigos.github.io/ploigos-charts"
