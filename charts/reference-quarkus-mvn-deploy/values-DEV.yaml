@@ -4,7 +4,7 @@
 # ANY MODIFICATIONS TO THIS FILE WILL BE
 # OVERWRITTEN BY THE CI/CD PIPELINE
 #
-# Generation Timestamp: 2020-12-10 18:41:24.154916
+# Generation Timestamp: 2020-12-14 15:41:56.085761
 ############################################
 #
 # Default values
@@ -37,7 +37,7 @@ route:
   annotations: {
   }
   path: /
-  hostname: fruit.s-mvn-jenkins-std-fruit-feature-results-refactor-dev.dev.apps.tssc.rht-set.com
+  hostname: 
 
   tls: []
   #  - secretName: chart-example-tls
