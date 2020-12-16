@@ -2,8 +2,8 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: {{ template "application.fullname" . }}
-  namespace: {{ .Values.deploymentNamespace }}
+  name: {{ .Values.route.name }}
+  namespace: {{ .Release.Namespace }}
 spec:
   {{- if .Values.route.hostname }}
   host: {{ .Values.route.hostname }}
@@ -13,6 +13,5 @@ spec:
     targetPort: http
   to:
     kind: Service
-    name: {{ template "application.fullname" . }}
+    name: {{ .Values.service.name }}
 {{- end }}
-
