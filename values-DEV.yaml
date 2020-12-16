@@ -1,3 +1,0 @@
-- command: update
-  path: image.tag
-  value: quay-quay-enterprise.apps.tssc.rht-set.com/ploigos-ref/ref-quarkus-mvn-jenkins-std-fruit:1.0.2-feature_results-refactor # written by ploigos-step-runner
