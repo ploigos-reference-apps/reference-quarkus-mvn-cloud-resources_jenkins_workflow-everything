@@ -2,3 +2,6 @@ replicaCount: 1
 
 image:
   tag: quay-quay-enterprise.apps.tssc.rht-set.com/ploigos-ref/ref-quarkus-mvn-jenkins-std-fruit:1.0.2-main
+
+route:
+  hostname: fruit-std-workflow.test.apps.tssc.rht-set.com

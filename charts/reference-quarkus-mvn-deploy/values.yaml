@@ -14,8 +14,7 @@ probe:
   livepath:  /fruits
 
 route:
-  name: fruit-std-workflow
-  hostname: # auto generate for dev
+  name: fruit
   enabled: True
   annotations: {
   }
