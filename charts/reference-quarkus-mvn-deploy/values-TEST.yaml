@@ -14,49 +14,37 @@
 #
 
 replicaCount: 1
-
 deploymentNamespace: igos-ref-ref-quarkus-mvn-jenkins-std-fruit-main-test
-
 service: ref-quarkus-mvn-jenkins-std-fruit
 image:
   repository: quay-quay-enterprise.apps.tssc.rht-set.com/ploigos-ref/ref-quarkus-mvn-jenkins-std-fruit
-  tag: 1.0.2-main
+  tag: quay-quay-enterprise.apps.tssc.rht-set.com/ploigos-ref/ref-quarkus-mvn-jenkins-std-fruit:1.0.2-main # written by ploigos-step-runner
   pullPolicy: Always
-
 service:
   type: ClusterIP
   port: 80
   targetport: 8080
-
 probe:
   readypath: /fruits
-  livepath:  /fruits
-
+  livepath: /fruits
 route:
   enabled: True
-  annotations: {
-  }
+  annotations: {}
   path: /
   hostname: fruit.igos-ref-ref-quarkus-mvn-jenkins-std-fruit-main-test.test.apps.tssc.rht-set.com
-
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:   #      - chart-example.local
-
 resources:
-  # We usually recommend not to specify default resources and to leave this as a conscious
-  # choice for the user. This also increases chances charts run on environments with little
-  # resources, such as Minikube. If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  # limits:   #  cpu: 100m
-  #  memory: 128Mi
-  # requests:   #  cpu: 100m
-  #  memory: 128Mi
+# We usually recommend not to specify default resources and to leave this as a conscious
+# choice for the user. This also increases chances charts run on environments with little
+# resources, such as Minikube. If you do want to specify resources, uncomment the following
+# lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+# limits:   #  cpu: 100m
+#  memory: 128Mi
+# requests:   #  cpu: 100m
+#  memory: 128Mi
 
-nodeSelector: {
-}
-
+nodeSelector: {}
 tolerations: []
-
-affinity: {
-}
+affinity: {}
