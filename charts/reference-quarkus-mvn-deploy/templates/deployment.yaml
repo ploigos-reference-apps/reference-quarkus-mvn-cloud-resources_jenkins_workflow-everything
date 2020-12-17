@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "application.fullname" . }}
-  namespace: {{ .Values.deploymentNamespace }}
+  namespace: {{ .Release.Namespace }}
   labels:
     app: {{ template "application.name" . }}
     chart: {{ template "application.chart" . }}
@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
