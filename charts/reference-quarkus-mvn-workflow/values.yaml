@@ -1,3 +1,3 @@
 global:
-  applicationName: ref-quarkus-mvn-jenkins-std
+  applicationName: ref-quarkus-mvn-jenkins-eve
   serviceName: fruit
