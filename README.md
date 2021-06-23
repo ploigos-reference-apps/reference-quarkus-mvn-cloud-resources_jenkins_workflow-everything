@@ -1,5 +1,6 @@
-# reference-quarkus-mvn-cloud-resources (Jenkins) (Workflow: Standard)
-The cloud resources for the [reference-quarkus-mvn_jenkins_workflow-standard](http://gitea.tssc.rht-set.com/ploigos-reference-applications/reference-quarkus-mvn_jenkins_workflow-standard) application.
+# reference-quarkus-mvn-cloud-resources (Jenkins) (Workflow: Everything)
+The cloud resources for the [reference-quarkus-mvn](https://github.com/ploigos-reference-apps/reference-quarkus-mvn)
+application when using Jenkins and the Everything workflow.
 
 ## Install
 
