@@ -11,6 +11,6 @@ type: application
 version: 0.1.0
 
 dependencies:
-- name: ploigos-workflow-shared-resources
-  version: "0.14.0"
+- name: ploigos-workflow-jenkins-resources
+  version: "0.18.0"
   repository: "https://ploigos.github.io/ploigos-charts"
