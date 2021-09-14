@@ -1,5 +1,5 @@
 # reference-quarkus-mvn-cloud-resources (Jenkins) (Workflow: Everything)
-The cloud resources for the [reference-quarkus-mvn](https://github.com/ploigos-reference-apps/reference-quarkus-mvn)
+The cloud resources for the [reference-quarkus-mvn (everything)](https://gitlab.apps.tssc.rht-set.com/ploigos-reference-applications/everything/reference-quarkus-mvn
 application when using Jenkins and the Everything workflow.
 
 ## Install
@@ -23,11 +23,11 @@ helm secrets upgrade --install \
     --render-subchart-notes
 ```
 
-### 2. Update Jenkinsfile
+### 2. Update GitLab CI Script
 
 1. The helm chart run will have output `PGP Keys Secret: ${PGP_KEYS_SECRET}`, you need to update
-the `pgpKeysSecretName` parameter in the Jenkinsfile in the associated project to this one
-with that value.
+the `pgpKeysSecretName` parameter in the .gitlab-ci.yml in the associated project to this one with
+that value.
 2. TODO
 
 ### 2. Configure Jenkins
