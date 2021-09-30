@@ -1,3 +1,3 @@
 replicaCount: 1
 image:
-  tag: registry-internal-nexus.apps.tssc.rht-set.com/ploigos-ref/ref-quarkus-mvn-jenkins-eve-fruit:1.0.2-feature_pelorus # written by ploigos-step-runner
+  tag: registry-internal-nexus.apps.tssc.rht-set.com/ploigos-ref/ref-quarkus-mvn-jenkins-eve/fruit@sha256:f2f7f544d8cc9f4a66fdc91fbec174f0793ac1fff921c3d1fafed1083aa90015 # written by ploigos-step-runner
