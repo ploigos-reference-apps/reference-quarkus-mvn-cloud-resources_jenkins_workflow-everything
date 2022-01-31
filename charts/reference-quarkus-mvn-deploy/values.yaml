@@ -1,3 +1,4 @@
+nameOverride: reference-quarkus-mvn-jenkins-eve
 replicaCount: 1
 
 image:

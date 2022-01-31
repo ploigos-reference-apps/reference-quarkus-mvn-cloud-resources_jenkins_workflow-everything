@@ -1,3 +1,4 @@
+environment: TEST
 replicaCount: 1
 image:
   tag: registry-internal-nexus.apps.tssc.rht-set.com/ploigos-ref/ref-quarkus-mvn-jenkins-eve/fruit@sha256:76bae3002ce1f1ccce0c3183b35fdf87c628a367787cbbcb3d0f2c289ec171ed # written by ploigos-step-runner

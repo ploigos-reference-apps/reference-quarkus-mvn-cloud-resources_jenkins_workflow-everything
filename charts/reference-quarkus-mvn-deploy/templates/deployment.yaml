@@ -4,22 +4,17 @@ metadata:
   name: {{ template "application.fullname" . }}
   namespace: {{ .Release.Namespace }}
   labels:
-    app: {{ template "application.name" . }}
-    chart: {{ template "application.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    {{- include "application.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: {{ template "application.name" . }}
-      release: {{ .Release.Name }}
+      {{- include "application.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        app: {{ template "application.name" . }}
-        release: {{ .Release.Name }}
+        {{- include "application.labels" . | nindent 8 }}
       annotations:
         alwaysRoll: {{ randAlphaNum 5 | quote }}
     spec:

@@ -4,10 +4,7 @@ metadata:
   name: {{ .Values.service.name }}
   namespace: {{ .Release.Namespace }}
   labels:
-    app: {{ template "application.name" . }}
-    chart: {{ template "application.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    {{- include "application.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -16,5 +13,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ template "application.name" . }}
-    release: {{ .Release.Name }}
+    {{- include "application.selectorLabels" . | nindent 4 }}
